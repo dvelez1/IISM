@@ -1,0 +1,34 @@
+Main Color: #FF2196F3
+
+Control Color
+#FF00B0FF
+#FF000000
+
+Texbox Colors
+#FFBBDEFB
+
+
+************
+1 - Warehouse - Done
+2 - BussinessType - Done
+3 - ServiceClass - Done
+4 - Product Category - Done
+5 - OfferClass - Done
+6 - Corporation - Class worked and need to be reveiced DVG 03-19-18
+7 - Customer - Class worked and need to be reveiced. DVG 03-19-18
+8 - Supplier - Class worked and need to be reveiced. DVG 03-19-18
+9 - Service and Materia Category - Class worked and need to be reveiced. DVG 03-20-18
+10 - Products - Class worked and need to be reveiced. DVG 03-20-18
+11 - Product Inventory
+**
+12 - Service and Raw Material
+13 - MaterialInventory
+14 - Supplier Invoice
+**
+15 - Offers
+16 - OffersByCustomer
+**
+17 - Invoice
+18 - InvoiceDet
+19 - 
+

@@ -1,0 +1,24 @@
+﻿<Window x:Class="IISM.MF_Forms.MF_WH"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:IISM.MF_Forms"
+        mc:Ignorable="d"
+        Title="MF Action" Height="271.4" Width="300">
+    <Grid Background="#FF2196F3">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="65*"/>
+            <ColumnDefinition Width="82*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="btmCreate" Margin="30,49,15,0" VerticalAlignment="Top" Click="btmCreate_Click" Background="#FF00B0FF" Height="99">
+            <Image Source="/IISM;component/Add.png" Stretch="Fill" Height="96" Width="85"/>
+        </Button>
+        <Button x:Name="btnEdit" HorizontalAlignment="Left" Margin="45,49,0,0" VerticalAlignment="Top" Width="85" RenderTransformOrigin="0.479,3.511" Click="btnEdit_Click" Background="#FF00B0FF" Height="99" Grid.Column="1">
+            <Image Source="/IISM;component/Edit.png" Stretch="Fill" Height="89" Width="85"/>
+        </Button>
+        <Button x:Name="btnRtn" HorizontalAlignment="Left" Margin="92,178,0,0" VerticalAlignment="Top" Width="106" Click="btnRtn_Click" Background="#FF00B0FF" Height="40" Grid.ColumnSpan="2">
+            <Image Source="/IISM;component/BackIcon32.png" Stretch="Fill" Height="32" Width="32"/>
+        </Button>
+    </Grid>
+</Window>

@@ -1,0 +1,38 @@
+﻿<Window x:Class="IISM.Invoices.Reports.InvoiceReportsMenu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:IISM.Invoices"
+        mc:Ignorable="d"
+        Title="Invoices Report" Height="264.279" Width="800" Initialized="Window_Initialized">
+    <Grid Background="#FF2196F3">
+        <ComboBox x:Name="cmbFY" HorizontalAlignment="Left" Height="25" Margin="117,14,0,0" VerticalAlignment="Top" Width="80" SelectionChanged="cmbFY_SelectionChanged"/>
+        <ComboBox x:Name="cmbFP" HorizontalAlignment="Left" Height="25" Margin="117,45,0,0" VerticalAlignment="Top" Width="659" SelectionChanged="cmbFP_SelectionChanged"/>
+        <ComboBox x:Name="cmbCustNo" HorizontalAlignment="Left" Margin="117,107,0,0" Width="659" SelectionChanged="cmbCustNo_SelectionChanged" Height="25" VerticalAlignment="Top">
+            <ComboBox.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                    <GradientStop Color="#FFBBDEFB" Offset="1"/>
+                </LinearGradientBrush>
+            </ComboBox.Background>
+        </ComboBox>
+        <Label Content="Year:" HorizontalContentAlignment="Right" Margin="51,12,686.6,0" VerticalAlignment="Top" FontWeight="Bold" Height="26"/>
+        <Label Content="From Month:" HorizontalContentAlignment="Right" Margin="10,48,686.6,0" FontWeight="Bold" Height="26" VerticalAlignment="Top"/>
+        <Label Content="Customer:" HorizontalAlignment="Right" HorizontalContentAlignment="Right" Margin="0,110,686.6,0" VerticalAlignment="Top" FontWeight="Bold" Height="26" Width="79"/>
+        <Button x:Name="btnRTN" Margin="674,170,27.6,0" VerticalAlignment="Top" Click="btnRTN_Click" Background="#FF00B0FF" Height="35">
+            <Image Source="/IISM;component/BackIcon32.png" Stretch="Fill" Height="32" Width="32"/>
+        </Button>
+        <Button x:Name="btmCreate" HorizontalAlignment="Left" Margin="347,170,0,0" VerticalAlignment="Top" Width="100" Click="btmCreate_Click" Background="#FF00B0FF" Height="35">
+            <Image Source="/IISM;component/SaveIcon32.png" Stretch="Fill" Height="32" Width="32"/>
+        </Button>
+        <Button x:Name="btnClear" Margin="24,170,669.6,0" VerticalAlignment="Top" Click="btnClear_Click" Background="#FF00B0FF" Height="35">
+            <Image Source="/IISM;component/Clear32.png" Stretch="Fill" Height="32" Width="32"/>
+        </Button>
+        <ComboBox x:Name="cmbFP_Last" HorizontalAlignment="Left" Height="25" Margin="117,76,0,0" VerticalAlignment="Top" Width="659" SelectionChanged="cmbFP_Last_SelectionChanged" />
+        <Label Content="To Month:" HorizontalContentAlignment="Right" Margin="28,79,686.6,0" FontWeight="Bold" Height="26" VerticalAlignment="Top"/>
+        <CheckBox x:Name="chkActive" Content="" HorizontalAlignment="Left" Margin="323,19,0,0" VerticalAlignment="Top" Click="chkActive_Click"/>
+        <Label Content="Invoice Details:" HorizontalContentAlignment="Right" Margin="215,12,470.6,0" VerticalAlignment="Top" FontWeight="Bold" Height="26"/>
+
+    </Grid>
+</Window>

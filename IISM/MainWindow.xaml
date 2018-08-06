@@ -1,0 +1,56 @@
+﻿<Window x:Class="IISM.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:IISM"
+        mc:Ignorable="d"
+        Title="Main Menu" Height="296.4" Width="650">
+    <!--Title="Main Menu" Height="296.4" Width="650">-->
+    <Grid OpacityMask="#FF0D47A1" Background="#FF2196F3" Margin="0,0,0.2,-15.8">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="135*"/>
+            <ColumnDefinition Width="52*"/>
+            <ColumnDefinition Width="398*"/>
+            <ColumnDefinition Width="58*"/>
+        </Grid.ColumnDefinitions>
+        <Image HorizontalAlignment="Left" Height="40" Margin="10,182,0,0" VerticalAlignment="Top" Width="58"/>
+        <GroupBox Header="Maintenance" HorizontalAlignment="Left" Height="117" Margin="25,90,0,0" VerticalAlignment="Top" Width="114" Grid.ColumnSpan="2" FontWeight="Bold" FontSize="14" BorderBrush="#FF1976D2">
+            <Button x:Name="btmMaintenance" HorizontalAlignment="Left" Margin="6,4,0,0" VerticalAlignment="Top" Width="86" Click="btmMaintenance_Click" Height="80" BorderBrush="#FF2196F3" Foreground="#FF2196F3">
+                <Button.Background>
+                    <ImageBrush/>
+                </Button.Background>
+                <Image Source="Maintenance_A_128.png" Stretch="Fill" Height="74" Width="75" OpacityMask="Black"/>
+            </Button>
+        </GroupBox>
+        <GroupBox Header="Invoices" HorizontalAlignment="Left" Height="117" Margin="46.958,92,0,0" VerticalAlignment="Top" Width="114" FontWeight="Bold" FontSize="14" BorderBrush="#FF1976D2" Grid.Column="1" Grid.ColumnSpan="2">
+            <Button x:Name="btnINVOICE" HorizontalAlignment="Left" Height="86" Margin="11,3,0,0" VerticalAlignment="Top" Width="80" BorderBrush="#FF2196F3" Foreground="#FF2196F3" Click="btnINVOICE_Click_1">
+                <Button.Background>
+                    <ImageBrush/>
+                </Button.Background>
+                <Image x:Name="imgInvoice" Source="Invoice_128F.png" Stretch="Fill" OpacityMask="Black" Height="74" Width="76"/>
+            </Button>
+            <!--<Button x:Name="btnINVOICE" HorizontalAlignment="Left" Height="86" Margin="11,3,0,0" VerticalAlignment="Top" Width="80" BorderBrush="#FF2196F3" Foreground="#FF2196F3"  Click="btnINVOICE_Click_1" Background="#FF2196F3">
+                <Image Source="/IISM;component/Invoice_128F.png" Stretch="Fill"  Height="74" Width="76"/>
+            </Button>-->
+        </GroupBox>
+
+
+        <GroupBox Header="Inventory" HorizontalAlignment="Left" Height="117" Margin="152.942,92,0,0" VerticalAlignment="Top" Width="114" FontWeight="Bold" FontSize="14" BorderBrush="#FF1976D2" Grid.Column="2">
+            <Button x:Name="btnInventory" HorizontalAlignment="Left" Height="86" Margin="9,3,0,0" VerticalAlignment="Top" Width="80" BorderBrush="#FF2196F3" Foreground="#FF2196F3" Click="btnInventory_Click">
+                <Button.Background>
+                    <ImageBrush/>
+                </Button.Background>
+                <Image x:Name="imgInventory" Source="Warehouse_128.png" Stretch="Fill" Height="74" Width="75" OpacityMask="Black"/>
+            </Button>
+        </GroupBox>
+        <GroupBox Header="Reports" HorizontalAlignment="Left" Height="117" Margin="308.942,92,0,0" VerticalAlignment="Top" Width="114" FontWeight="Bold" FontSize="14" BorderBrush="#FF1976D2" Grid.Column="2" Grid.ColumnSpan="2"/>
+        <Label x:Name="imgPresentation" Content="Welcome to: Inventories and Invoices Management Software " HorizontalAlignment="Center" VerticalAlignment="Top" Grid.ColumnSpan="4" Width="643" FontWeight="Bold" FontSize="18" Background="#FF1976D2" Height="45" BorderThickness="0" TextOptions.TextFormattingMode="Display" TextOptions.TextHintingMode="Fixed" Margin="0,0,0.507,0"/>
+        <Button x:Name="btnReports" Grid.ColumnSpan="2" Grid.Column="2" HorizontalAlignment="Left" Height="86" Margin="325.942,113,0,0" VerticalAlignment="Top" Width="80" BorderBrush="#FF2196F3" Foreground="#FF2196F3" Click="btnReports_Click">
+            <Button.Background>
+                <ImageBrush/>
+            </Button.Background>
+            <Image x:Name="imgReports" Source="Stock-Exchange-128.png" Stretch="Fill" Height="74" Width="75" OpacityMask="Black"/>
+        </Button>
+    </Grid>
+</Window>
