@@ -81,6 +81,7 @@ namespace IISM.Invoices
             {
                 struc.Year = Convert.ToInt32( cmbFY.SelectedValue.ToString());
                 cmbFP.ItemsSource = null;
+                struc.InvNo = 0;
                 using (EntitiesClass.GetMyDateOfInvoice Myclass = new EntitiesClass.GetMyDateOfInvoice())
                 {
                     Myclass.LoadMonthComboBox(ref cmbFP);
@@ -103,6 +104,7 @@ namespace IISM.Invoices
             {
                 struc.Month = Convert.ToInt32 (cmbFP.SelectedValue.ToString());
                 cmbCustNo.ItemsSource = null;
+                struc.InvNo = 0;
                 InvoiceClss.LoadInvoiceCombobox(ref cmbCustNo, struc.Year, struc.Month, true,struc.CustNo);
             }
             catch (Exception)
@@ -118,6 +120,7 @@ namespace IISM.Invoices
             {
                 struc.CustNo = Convert.ToInt32(cmbCustNo.SelectedValue.ToString());
                 cmbInvNo.ItemsSource = null;
+                struc.InvNo = 0;
                 InvoiceClss.LoadInvoiceCombobox(ref cmbInvNo, struc.Year, struc.Month, false, struc.CustNo);
             }
             catch (Exception)
@@ -135,8 +138,8 @@ namespace IISM.Invoices
             }
             catch (Exception)
             {
+                struc.InvNo = 0;
 
-                
             }
         }
 
@@ -148,10 +151,20 @@ namespace IISM.Invoices
 
         private void btmCreate_Click(object sender, RoutedEventArgs e)
         {
-            GlobalVar.InvNoId = struc.InvNo;
-            ResetStruct();
-            IISM.Invoices.Invoice_Edit W = new IISM.Invoices.Invoice_Edit();
-            W.Show();this.Close();
+            if (struc.InvNo != 0)
+            {
+                GlobalVar.InvNoId = struc.InvNo;
+                ResetStruct();
+                IISM.Invoices.Invoice_Edit W = new IISM.Invoices.Invoice_Edit();
+                W.Show(); this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Error: Please, select a valid Invoice Number! ", "Error", MessageBoxButton.OK, MessageBoxImage.Information);
+
+            }
+            
+
         }
 
 

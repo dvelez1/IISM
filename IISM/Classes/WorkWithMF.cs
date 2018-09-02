@@ -10,6 +10,7 @@ using IISM.DataModel;
 using System.Collections.ObjectModel;
 using System.Text.RegularExpressions;
 using IISM.Classes;
+using System.Data.OleDb;
 
 namespace IISM.Classes
 {
@@ -2567,7 +2568,22 @@ namespace IISM.Classes
 
         }
 
+        public static void DeleteInvoice(long InvNo)
+        {
 
+            //string dropCommand = "Delete From Invoice  WHERE InvoiceID =" + InvNo + ";";
+
+            //OleDbConnection conn = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\IISM\IISM\IISM_DB\IISM.accdb;Persist Security Info=True");
+            //conn.Open();
+            //OleDbCommand cmd = new OleDbCommand(dropCommand, conn);
+
+            //cmd.ExecuteNonQuery();
+            //conn.Close();
+
+
+
+
+        }
 
 
         #endregion

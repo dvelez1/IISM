@@ -405,6 +405,19 @@ namespace IISM.Invoices
         }
 
 
+        private void Delete_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBoxResult result = MessageBox.Show("Message: Are you sure to Delete the Invoice! ", "Please Evaluate Carefully", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+
+            if (result == MessageBoxResult.Yes)
+            {
+
+
+            }
+
+            MessageBox.Show("Message: In progress", "Information", MessageBoxButton.OK, MessageBoxImage.Information);
+        }
+
         #endregion
 
     }

@@ -25,9 +25,20 @@
         <Button x:Name="btnRTN" Margin="674,170,27.6,0" VerticalAlignment="Top" Click="btnRTN_Click" Background="#FF00B0FF" Height="35">
             <Image Source="/IISM;component/BackIcon32.png" Stretch="Fill" Height="32" Width="32"/>
         </Button>
+       
+        
         <Button x:Name="btmCreate" HorizontalAlignment="Left" Margin="347,170,0,0" VerticalAlignment="Top" Width="100" Click="btmCreate_Click" Background="#FF00B0FF" Height="35">
             <Image Source="/IISM;component/SaveIcon32.png" Stretch="Fill" Height="32" Width="32"/>
+
+        
+
+
+
         </Button>
+
+ 
+
+
         <Button x:Name="btnClear" Margin="24,170,669.6,0" VerticalAlignment="Top" Click="btnClear_Click" Background="#FF00B0FF" Height="35">
             <Image Source="/IISM;component/Clear32.png" Stretch="Fill" Height="32" Width="32"/>
         </Button>
