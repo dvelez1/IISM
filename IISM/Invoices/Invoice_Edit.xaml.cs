@@ -405,6 +405,56 @@ namespace IISM.Invoices
         }
 
 
+        private void Delete_Click(object sender, RoutedEventArgs e)
+        {
+
+            if (InvNo == 0)
+            {
+                MessageBox.Show("Message: Please, select an Invoice", "Error", MessageBoxButton.OK, MessageBoxImage.Exclamation);
+                goto Exit_Loop;
+
+
+            }
+
+            MessageBoxResult result = MessageBox.Show("Message: Are you sure to Delete the Invoice? ", "Please Evaluate Carefully", MessageBoxButton.YesNo, MessageBoxImage.Question);
+
+            if (result == MessageBoxResult.Yes)
+            {
+
+
+                SQLCommand v = new SQLCommand();
+                if (v.DeleteQry("Delete from Invoice where Invoice.InvoiceID=" + InvNo))
+                {
+                    MessageBox.Show("Message: Error deleting invoices. Try again or report to IT", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                    goto Exit_Loop;
+                }
+
+
+                if (v.DeleteQry("Delete from InvoiceDet where InvoiceDet.InvoiceID=" + InvNo))
+                {
+                    MessageBox.Show("Message: Error deleting invoiceDet. Try again or report to IT", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                    goto Exit_Loop;
+                }
+
+
+                if (v.DeleteQry("Delete from InvoicePayments where InvoicePayments.InvoiceID=" + InvNo))
+                {
+                    MessageBox.Show("Message: Error deleting invoicePayment. Try again or report to IT", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                    goto Exit_Loop;
+                }
+
+                //Update Inventory
+                MessageBox.Show("Message: Transaction completed!", "Note", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show("Message: Is your responsibility update the Product Inventory if apply!", "Note", MessageBoxButton.OK, MessageBoxImage.Information);
+                   
+                v.Dispose();                 
+
+            }
+
+            Exit_Loop:;
+            ReturnToInvoiceSelection();
+        }
+
         #endregion
 
     }

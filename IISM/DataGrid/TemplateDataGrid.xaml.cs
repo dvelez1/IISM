@@ -49,21 +49,37 @@ namespace IISM.DataGrid
         {
 
             ExportToExcel();
+            Close();
 
         }
 
         private void ExportToExcel()
         {
-            dtGrid.SelectAllCells();
-            dtGrid.ClipboardCopyMode = DataGridClipboardCopyMode.IncludeHeader;
-            ApplicationCommands.Copy.Execute(null, dtGrid);
-            String resultat = (string)System.Windows.Clipboard.GetData(System.Windows.DataFormats.CommaSeparatedValue);
-            String result = (string)System.Windows.Clipboard.GetData(System.Windows.DataFormats.Text);
-            dtGrid.UnselectAllCells();
-            System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Prueba\test.xls");
-            file.WriteLine(result.Replace(',', ' '));
-            file.Close();
-            Process.Start(@"C:\Prueba\test.xls");
+
+            try
+            {
+                dtGrid.SelectAllCells();
+                dtGrid.ClipboardCopyMode = DataGridClipboardCopyMode.IncludeHeader;
+                ApplicationCommands.Copy.Execute(null, dtGrid);
+                String resultat = (string)System.Windows.Clipboard.GetData(System.Windows.DataFormats.CommaSeparatedValue);
+                String result = (string)System.Windows.Clipboard.GetData(System.Windows.DataFormats.Text);
+
+                dtGrid.UnselectAllCells();
+                System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Prueba\test.xls");
+                file.WriteLine(result.Replace(',', ' '));
+                file.Close();
+            
+                Process.Start(@"C:\Prueba\test.xls");
+                result = null;
+            }
+            catch (Exception)
+            {
+                System.Windows.MessageBox.Show("Error loading Excel. Please Save Excel with other name and Close the original sheet! ", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+
+            }
+
+            
+
 
         }
 
