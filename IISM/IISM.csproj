@@ -65,6 +65,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Classes\SQLCommand.cs" />
     <Compile Include="Invoices\ClassToDeleteGitHubTest.cs" />
     <Compile Include="Reports\InvoiceRptMenu.xaml.cs">
       <DependentUpon>InvoiceRptMenu.xaml</DependentUpon>
