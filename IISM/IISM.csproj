@@ -66,6 +66,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Classes\SQLCommand.cs" />
+    <Compile Include="Classes\UnlockApp.cs" />
     <Compile Include="Invoices\ClassToDeleteGitHubTest.cs" />
     <Compile Include="Reports\InvoiceRptMenu.xaml.cs">
       <DependentUpon>InvoiceRptMenu.xaml</DependentUpon>
@@ -298,6 +299,7 @@
     <None Include="DataModel\IISM_Dataset.xss">
       <DependentUpon>IISM_Dataset.xsd</DependentUpon>
     </None>
+    <None Include="MF_Forms\UnlockApp\Pswd.json" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -347,6 +349,10 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MF_Forms\UnlockApp\AskForPswd.html" />
+    <Content Include="MF_Forms\UnlockApp\Style.css" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

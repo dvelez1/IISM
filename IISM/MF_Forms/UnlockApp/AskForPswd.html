@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <link href="Style.css" rel="stylesheet" >
+    <title>Unlock App for One Month</title>
+</head>
+<body>
+    <h1>This is a Demo App, please provide a Password to Unlock the App for another free Month or Buy the Software.</h1>
+    <form action="" onsubmit="return MyFunction();">
+        Unlock App:
+        <input type="text" id="psw1"  name="Password" >
+        <!--<input type="text" id="psw2"  name="Password2" >-->
+        <input type="submit" value="Submit"/>
+        
+    </form>
+
+    <!--On Submit, is password is equal, continue (Call the main Form). If not, Close the App.-->
+   
+    <!--<input button type="button" id="clickme" onclick="MyFunction">Compare/>-->
+    <script>
+        function MyFunction() {
+        
+           var value1 = document.getElementById("psw1").value;
+            //var value2 = document.getElementById("psw2").value;
+            var value2 = "unlock-KE";
+
+            if (value1 == value2) {
+                alert  ('EQUAL');
+                return true;
+            }
+            else {
+                alert ('NO EQUAL');
+                return false;
+            }
+
+            
+        }
+    </script>
+
+    <p id="MSG"></p>
+</body>
+</html>
