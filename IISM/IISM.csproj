@@ -68,6 +68,9 @@
     <Compile Include="Classes\SQLCommand.cs" />
     <Compile Include="Classes\UnlockApp.cs" />
     <Compile Include="Invoices\ClassToDeleteGitHubTest.cs" />
+    <Compile Include="MF_Forms\UnlockApp\WPF_Unlock\Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Reports\InvoiceRptMenu.xaml.cs">
       <DependentUpon>InvoiceRptMenu.xaml</DependentUpon>
     </Compile>
@@ -202,6 +205,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="MF_Forms\UnlockApp\WPF_Unlock\Login.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MF_Forms\WH\MF_WH.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -316,6 +323,7 @@
     <Folder Include="IconsFolder\" />
     <Folder Include="Icons\" />
     <Folder Include="obj\" />
+    <Folder Include="Suppliers\" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Maintenance_A_#FF00B0FF_128.png" />
