@@ -1,8 +1,10 @@
-﻿<Application x:Class="IISM.App"
+﻿<Application x:Name="EUnlockBtn" x:Class="IISM.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:IISM"
-             StartupUri="MainWindow.xaml">
+             StartupUri="MF_Forms/UnlockApp/WPF_Unlock/Login.xaml">
+             <!--StartupUri="MainWindow.xaml">-->
+   
     <Application.Resources>
          
     </Application.Resources>
