@@ -31,7 +31,7 @@ namespace IISM.MF_Forms.UnlockApp.WPF_Unlock
         {
 
             this.user = this.txtName.Text;
-            this.pswd = this.txtPSWD.Text;
+            this.pswd = this.passwordbox_NAME.Password;
 
             if (this.user == "TempUnlock")
             {
@@ -45,14 +45,14 @@ namespace IISM.MF_Forms.UnlockApp.WPF_Unlock
                 else
                 {
                     MessageBox.Show("Incorrect Password.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-                    this.txtPSWD.Text = null;
+                    this.passwordbox_NAME.Password = null;
                 }
 
             }
             else
             {
                 MessageBox.Show("Incorrect UserName.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-                this.txtPSWD.Text = null;
+                this.passwordbox_NAME.Password = null;
                 this.txtName.Text = null;
             }
 
@@ -67,7 +67,6 @@ namespace IISM.MF_Forms.UnlockApp.WPF_Unlock
 
         private void Window_Initialized(object sender, EventArgs e)
         {
-            this.txtPSWD.Text = null;
             this.txtName.Text = null;
         }
     }
